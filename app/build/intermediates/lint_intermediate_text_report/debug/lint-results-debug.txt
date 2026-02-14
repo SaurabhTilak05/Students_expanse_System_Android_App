@@ -1,0 +1,174 @@
+C:\Users\saura\Desktop\android\app\build.gradle.kts:13: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk = 34
+        ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\Users\saura\Desktop\android\app\build.gradle.kts:36: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.17.0 [GradleDependency]
+    implementation("androidx.core:core-ktx:1.12.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\build.gradle.kts:37: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation("androidx.appcompat:appcompat:1.6.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\build.gradle.kts:38: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0 [GradleDependency]
+    implementation("com.google.android.material:material:1.11.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\build.gradle.kts:39: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\build.gradle.kts:41: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\build.gradle.kts:42: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\saura\Desktop\android\app\src\main\java\com\example\studentexpensetracker\ExpenseAdapter.kt:38: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged()
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+C:\Users\saura\Desktop\android\app\src\main\AndroidManifest.xml:5: Warning: Should explicitly set android:icon, there is no default [MissingApplicationIcon]
+    <application
+     ~~~~~~~~~~~
+
+   Explanation for issues of type "MissingApplicationIcon":
+   You should set an icon for the application as whole because there is no
+   default. This attribute must be set as a reference to a drawable resource
+   containing the image (for example @drawable/icon).
+
+   https://developer.android.com/studio/publish/preparing#publishing-configure
+
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:8: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:21: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "TextFields":
+   Providing an inputType attribute on a text field improves usability because
+   depending on the data to be input, optimized keyboards can be shown to the
+   user (such as just digits and parentheses for a phone number). 
+
+   The lint detector also looks at the id of the view, and if the id offers a
+   hint of the purpose of the field (for example, the id contains the phrase
+   phone or email), then lint will also ensure that the inputType contains the
+   corresponding type attributes.
+
+   If you really want to keep the text field generic, you can suppress this
+   warning by setting inputType="text".
+
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:8: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:14: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:21: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:27: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:12: Warning: Hardcoded string "Expense Title", should use @string resource [HardcodedText]
+        android:hint="Expense Title" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:19: Warning: Hardcoded string "Amount", should use @string resource [HardcodedText]
+        android:hint="Amount" />
+        ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:25: Warning: Hardcoded string "Category (e.g., Food, Travel)", should use @string resource [HardcodedText]
+        android:hint="Category (e.g., Food, Travel)" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:31: Warning: Hardcoded string "Date (YYYY-MM-DD)", should use @string resource [HardcodedText]
+        android:hint="Date (YYYY-MM-DD)"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_add_expense.xml:38: Warning: Hardcoded string "Save Expense", should use @string resource [HardcodedText]
+        android:text="Save Expense" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_main.xml:32: Warning: Hardcoded string "Total Expenses", should use @string resource [HardcodedText]
+                    android:text="Total Expenses"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_main.xml:40: Warning: Hardcoded string "$0.00", should use @string resource [HardcodedText]
+                    android:text="$0.00"
+                    ~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\activity_main.xml:63: Warning: Hardcoded string "Add Expense", should use @string resource [HardcodedText]
+        android:contentDescription="Add Expense"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\item_expense.xml:26: Warning: Hardcoded string "Title", should use @string resource [HardcodedText]
+                android:text="Title"
+                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\item_expense.xml:34: Warning: Hardcoded string "$0.00", should use @string resource [HardcodedText]
+                android:text="$0.00"
+                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\item_expense.xml:49: Warning: Hardcoded string "Category", should use @string resource [HardcodedText]
+                android:text="Category"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\saura\Desktop\android\app\src\main\res\layout\item_expense.xml:61: Warning: Hardcoded string "Date", should use @string resource [HardcodedText]
+                android:text="Date"
+                ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 27 warnings

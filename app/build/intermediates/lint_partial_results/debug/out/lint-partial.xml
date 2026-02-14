@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.0" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.studentexpensetracker.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="attr[colorPrimaryVariant(R)],color[black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],drawable[ic_add(U)],id[etDate(U),rvExpenses(U),tvDate(U),fabAdd(U),tvTitle(U),etAmount(U),tvTotalExpense(U),tvCategory(U),etTitle(U),btnSave(U),etCategory(U),tvAmount(U)],layout[activity_add_expense(U),activity_main(U),item_expense(U)],string[app_name(U)],style[Theme_StudentExpenseTracker(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)];7^3,15^6^3^7,16^4,18^19^6^5^3^2^4^1^0;;;"/>
+    </map>
+
+</incidents>
