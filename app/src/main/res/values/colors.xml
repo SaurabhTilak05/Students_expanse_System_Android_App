@@ -56,8 +56,21 @@
     <color name="badge_blue_text">#1E40AF</color>
     <color name="badge_green_bg">#D1FAE5</color>
     <color name="badge_green_text">#065F46</color>
-    <color name="badge_purple_bg">#E9D5FF</color>
     <color name="badge_purple_text">#6B21A8</color>
+    
+    <!-- Category Specific Colors -->
+    <color name="cat_food_bg">#FFF7ED</color>
+    <color name="cat_food_icon">#EA580C</color>
+    <color name="cat_travel_bg">#EFF6FF</color>
+    <color name="cat_travel_icon">#2563EB</color>
+    <color name="cat_shopping_bg">#FDF2F8</color>
+    <color name="cat_shopping_icon">#DB2777</color>
+    <color name="cat_bills_bg">#F0FDF4</color>
+    <color name="cat_bills_icon">#16A34A</color>
+    <color name="cat_rent_bg">#FAF5FF</color>
+    <color name="cat_rent_icon">#7C3AED</color>
+    <color name="cat_others_bg">#F8FAFC</color>
+    <color name="cat_others_icon">#475569</color>
     
     <!-- Legacy Compatibility -->
     <color name="purple_200">#BBDEFB</color>

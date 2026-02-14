@@ -99,8 +99,9 @@ class GroupedTransactionAdapter(
         private val tvAmount: TextView = itemView.findViewById(R.id.tvAmount)
         private val tvCategory: TextView = itemView.findViewById(R.id.tvCategory)
         private val tvDate: TextView = itemView.findViewById(R.id.tvDate)
-        private val tvTime: TextView = itemView.findViewById(R.id.tvTime)
         private val tvPaymentMode: TextView = itemView.findViewById(R.id.tvPaymentMode)
+        private val cvCategoryIcon: androidx.cardview.widget.CardView = itemView.findViewById(R.id.cvCategoryIcon)
+        private val ivCategoryIcon: ImageView = itemView.findViewById(R.id.ivCategoryIcon)
         private val btnEdit: android.widget.ImageButton = itemView.findViewById(R.id.btnEdit)
         private val btnDelete: android.widget.ImageButton = itemView.findViewById(R.id.btnDelete)
 
@@ -118,8 +119,10 @@ class GroupedTransactionAdapter(
 
             tvCategory.text = expense.category
             tvDate.text = expense.date
-            tvTime.text = expense.time
             tvPaymentMode.text = expense.paymentMode
+            
+            // Set Category Icon and Theme Color
+            setCategoryIcon(expense.category)
 
             // Set Payment Mode Tag Color
             if (expense.paymentMode.equals("Cash", ignoreCase = true)) {
@@ -139,6 +142,22 @@ class GroupedTransactionAdapter(
             btnDelete.setOnClickListener {
                 onDeleteClick(expense)
             }
+        }
+
+        private fun setCategoryIcon(category: String) {
+            val context = itemView.context
+            val (iconRes, bgColor, iconColor) = when (category) {
+                "Food" -> Triple(R.drawable.ic_food, R.color.cat_food_bg, R.color.cat_food_icon)
+                "Travel" -> Triple(R.drawable.ic_travel, R.color.cat_travel_bg, R.color.cat_travel_icon)
+                "Shopping" -> Triple(R.drawable.ic_shopping, R.color.cat_shopping_bg, R.color.cat_shopping_icon)
+                "Bills" -> Triple(R.drawable.ic_bills, R.color.cat_bills_bg, R.color.cat_bills_icon)
+                "Rent" -> Triple(R.drawable.ic_rent, R.color.cat_rent_bg, R.color.cat_rent_icon)
+                else -> Triple(R.drawable.ic_others, R.color.cat_others_bg, R.color.cat_others_icon)
+            }
+
+            ivCategoryIcon.setImageResource(iconRes)
+            ivCategoryIcon.imageTintList = android.content.res.ColorStateList.valueOf(context.getColor(iconColor))
+            cvCategoryIcon.setCardBackgroundColor(context.getColor(bgColor))
         }
     }
 

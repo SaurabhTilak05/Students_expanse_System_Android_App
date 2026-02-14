@@ -26,7 +26,6 @@ class AddExpenseActivity : AppCompatActivity() {
         val etAmount = findViewById<EditText>(R.id.etAmount)
         val spinnerCategory = findViewById<android.widget.Spinner>(R.id.spinnerCategory)
         val etDate = findViewById<EditText>(R.id.etDate)
-        val etTime = findViewById<EditText>(R.id.etTime)
         val etDescription = findViewById<EditText>(R.id.etDescription)
         val spinnerPaymentMode = findViewById<android.widget.Spinner>(R.id.spinnerPaymentMode)
         val btnSave = findViewById<Button>(R.id.btnSave)
@@ -46,13 +45,16 @@ class AddExpenseActivity : AppCompatActivity() {
         paymentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerPaymentMode.adapter = paymentAdapter
 
+        // Variables to store current time (internal)
+        var transactionTime = ""
+
         // Check if editing
         if (intent.hasExtra("EXPENSE_ID")) {
             expenseId = intent.getIntExtra("EXPENSE_ID", -1)
             etTitle.setText(intent.getStringExtra("TITLE"))
             etAmount.setText(intent.getDoubleExtra("AMOUNT", 0.0).toString())
             etDate.setText(intent.getStringExtra("DATE"))
-            etTime.setText(intent.getStringExtra("TIME") ?: "")
+            transactionTime = intent.getStringExtra("TIME") ?: ""
             etDescription.setText(intent.getStringExtra("DESCRIPTION"))
             
             val category = intent.getStringExtra("CATEGORY")
@@ -81,8 +83,8 @@ class AddExpenseActivity : AppCompatActivity() {
             val currentDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
             etDate.setText(currentDate)
             
-            val currentTime = SimpleDateFormat("hh:mm a", Locale.getDefault()).format(Date())
-            etTime.setText(currentTime)
+            // Automatically capture current system time (internal only)
+            transactionTime = SimpleDateFormat("hh:mm a", Locale.getDefault()).format(Date())
         }
         
         // Date Picker Dialog
@@ -98,23 +100,6 @@ class AddExpenseActivity : AppCompatActivity() {
             }, year, month, day)
             
             datePickerDialog.show()
-        }
-
-        // Time Picker Dialog
-        etTime.setOnClickListener {
-            val calendar = java.util.Calendar.getInstance()
-            val hour = calendar.get(java.util.Calendar.HOUR_OF_DAY)
-            val minute = calendar.get(java.util.Calendar.MINUTE)
-
-            val timePickerDialog = android.app.TimePickerDialog(this, { _, selectedHour, selectedMinute ->
-                val calendarTime = java.util.Calendar.getInstance()
-                calendarTime.set(java.util.Calendar.HOUR_OF_DAY, selectedHour)
-                calendarTime.set(java.util.Calendar.MINUTE, selectedMinute)
-                val formattedTime = SimpleDateFormat("hh:mm a", Locale.getDefault()).format(calendarTime.time)
-                etTime.setText(formattedTime)
-            }, hour, minute, false)
-            
-            timePickerDialog.show()
         }
 
         // Update button text based on transaction type
@@ -134,7 +119,6 @@ class AddExpenseActivity : AppCompatActivity() {
             val amountStr = etAmount.text.toString()
             val category = spinnerCategory.selectedItem.toString()
             val date = etDate.text.toString()
-            val time = etTime.text.toString()
             val description = etDescription.text.toString()
             val paymentMode = spinnerPaymentMode.selectedItem.toString()
 
@@ -155,7 +139,7 @@ class AddExpenseActivity : AppCompatActivity() {
                 amount = amount,
                 category = category,
                 date = date,
-                time = time,
+                time = transactionTime,
                 description = description,
                 paymentMode = paymentMode,
                 type = if (rbIncome.isChecked) "Income" else "Expense"

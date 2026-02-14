@@ -1360,7 +1360,6 @@ color badge_blue_bg
 color badge_blue_text
 color badge_green_bg
 color badge_green_text
-color badge_purple_bg
 color badge_purple_text
 color black
 color border
@@ -1379,6 +1378,18 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color cat_bills_bg
+color cat_bills_icon
+color cat_food_bg
+color cat_food_icon
+color cat_others_bg
+color cat_others_icon
+color cat_rent_bg
+color cat_rent_icon
+color cat_shopping_bg
+color cat_shopping_icon
+color cat_travel_bg
+color cat_travel_icon
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -3030,6 +3041,7 @@ drawable design_snackbar_background
 drawable ic_add
 drawable ic_app_icon
 drawable ic_arrow_back_black_24
+drawable ic_bills
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -3044,6 +3056,7 @@ drawable ic_delete
 drawable ic_edit
 drawable ic_expand_less
 drawable ic_expand_more
+drawable ic_food
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -3055,7 +3068,11 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_others
+drawable ic_rent
 drawable ic_search_black_24
+drawable ic_shopping
+drawable ic_travel
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3277,6 +3294,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id cvCategoryIcon
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3322,7 +3340,6 @@ id enterAlwaysCollapsed
 id etAmount
 id etDate
 id etDescription
-id etTime
 id etTitle
 id exitUntilCollapsed
 id expand_activities_button
@@ -3374,6 +3391,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id ivCategoryIcon
 id ivExpandIcon
 id jumpToEnd
 id jumpToStart
@@ -3637,7 +3655,6 @@ id tvFooterAppInfo
 id tvGroupDate
 id tvIncomeSummary
 id tvPaymentMode
-id tvTime
 id tvTitle
 id tvTotalExpense
 id tvTotalIncome
