@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.13.2" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.studentexpensetracker.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.color.black"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="8"
+            column="12"
+            startOffset="292"
+            endLine="8"
+            endColumn="24"
+            endOffset="304"/>
+        <location id="R.color.purple_200"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="3"
+            column="12"
+            startOffset="64"
+            endLine="3"
+            endColumn="29"
+            endOffset="81"/>
+        <location id="R.color.purple_500"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="4"
+            column="12"
+            startOffset="112"
+            endLine="4"
+            endColumn="29"
+            endOffset="129"/>
+        <location id="R.color.purple_700"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="5"
+            column="12"
+            startOffset="158"
+            endLine="5"
+            endColumn="29"
+            endOffset="175"/>
+        <location id="R.color.surface"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="16"
+            column="12"
+            startOffset="599"
+            endLine="16"
+            endColumn="26"
+            endOffset="613"/>
+        <location id="R.color.teal_200"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="6"
+            column="12"
+            startOffset="204"
+            endLine="6"
+            endColumn="27"
+            endOffset="219"/>
+        <entry
+            name="model"
+            string="attr[colorControlNormal(R),selectableItemBackground(R),selectableItemBackgroundBorderless(R),colorPrimaryVariant(R)],color[accent(U),primary(U),white(U),primary_dark(U),text_secondary(U),background(U),error(U),text_primary(U),divider(U),purple_200(D),purple_500(D),purple_700(D),teal_200(D),teal_700(U),black(D),surface(D)],drawable[circular_progress(U),ic_add(U),ic_app_icon(U),ic_close(U),ic_delete(U),ic_edit(U),ic_launcher_background(U),ic_launcher_foreground(U),rounded_background_white(U),rounded_top_corners_white(U)],id[etAmount(U),etTitle(U),spinnerCategory(U),etDate(U),spinnerPaymentMode(U),etDescription(U),btnSave(U),spinnerMonth(U),spinnerYear(U),btnResetFilter(U),progressBar(U),tvTotalExpense(U),tvExpenseSummary(U),rvExpenses(U),fabAdd(U),tvFooterAppInfo(U),tvTitle(U),tvCategory(U),tvAmount(U),tvPaymentMode(U),tvDate(U),btnEdit(U),btnDelete(U),btnClose(U)],layout[activity_add_expense(U),activity_main(U),item_expense(U),layout_about_bottom_sheet(U)],mipmap[ic_launcher(U)],string[app_name(U)],style[Theme_StudentExpenseTracker(U),Widget_MaterialComponents_TextInputLayout_OutlinedBox(R),Widget_Material3_Button_TextButton(R),Theme_Material3_DayNight_NoActionBar(R)];14^4^5,15^6,18^0,19^0,1c^6,1d^6,36^7^16^3d^8^1c^5,37^9^1c^5^3e^6^14^8^7^4^a^b^15^1,38^6^1c^b^8^a^c^5^2^19^18,39^1d^b^2^17^8^3a^5^c,3a^1a^1b,3c^3f^5^7^6^4^11^3^9;;;"/>
+    </map>
+
+</incidents>

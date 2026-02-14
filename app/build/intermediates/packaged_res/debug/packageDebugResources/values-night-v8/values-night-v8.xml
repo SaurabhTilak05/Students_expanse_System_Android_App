@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="accent">#34D399</color>
+    <color name="background">#0F172A</color>
+    <color name="badge_blue_bg">#1E3A8A</color>
+    <color name="badge_blue_text">#93C5FD</color>
+    <color name="badge_green_bg">#064E3B</color>
+    <color name="badge_green_text">#6EE7B7</color>
+    <color name="badge_purple_bg">#581C87</color>
+    <color name="badge_purple_text">#D8B4FE</color>
+    <color name="black">#FF000000</color>
+    <color name="border">#334155</color>
+    <color name="card_background">#1E293B</color>
+    <color name="divider">#334155</color>
+    <color name="error">#F87171</color>
+    <color name="icon_green">#34D399</color>
+    <color name="info">#60A5FA</color>
+    <color name="input_background">#0F172A</color>
+    <color name="on_background">#F1F5F9</color>
+    <color name="on_primary">#0F172A</color>
+    <color name="on_secondary">#0F172A</color>
+    <color name="on_surface">#F1F5F9</color>
+    <color name="overlay_dark">#0000004D</color>
+    <color name="overlay_light">#FFFFFF20</color>
+    <color name="primary">#60A5FA</color>
+    <color name="primary_dark">#3B82F6</color>
+    <color name="primary_light">#93C5FD</color>
+    <color name="primary_variant">#3B82F6</color>
+    <color name="purple_200">#93C5FD</color>
+    <color name="purple_500">#60A5FA</color>
+    <color name="purple_700">#3B82F6</color>
+    <color name="ripple">#F1F5F91A</color>
+    <color name="secondary">#34D399</color>
+    <color name="secondary_variant">#10B981</color>
+    <color name="spinner_background">#1E293B</color>
+    <color name="success">#34D399</color>
+    <color name="surface">#1E293B</color>
+    <color name="surface_variant">#334155</color>
+    <color name="teal_200">#6EE7B7</color>
+    <color name="teal_700">#34D399</color>
+    <color name="text_disabled">#475569</color>
+    <color name="text_primary">#F1F5F9</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_tertiary">#64748B</color>
+    <color name="warning">#FBBF24</color>
+    <color name="white">#FFFFFFFF</color>
+    <style name="Theme.StudentExpenseTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        
+        
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        
+        
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        
+        
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="m">false</item>
+        
+        
+        <item name="android:windowBackground">@color/background</item>
+        
+        
+        <item name="colorError">@color/error</item>
+        
+        
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        
+        
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+</resources>
