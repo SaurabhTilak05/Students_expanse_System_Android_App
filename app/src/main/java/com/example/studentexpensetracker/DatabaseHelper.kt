@@ -9,7 +9,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
 
     companion object {
         private const val DATABASE_NAME = "expense_tracker.db"
-        private const val DATABASE_VERSION = 3 // Incremented for type column
+        private const val DATABASE_VERSION = 4 // Incremented for time column
         const val TABLE_EXPENSES = "expenses"
         const val COLUMN_ID = "id"
         const val COLUMN_TITLE = "title"
@@ -19,6 +19,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         const val COLUMN_DESCRIPTION = "description"
         const val COLUMN_PAYMENT_MODE = "payment_mode"
         const val COLUMN_TYPE = "type" // Income or Expense
+        const val COLUMN_TIME = "time"
     }
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -30,7 +31,8 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 + COLUMN_CATEGORY + " TEXT,"
                 + COLUMN_DESCRIPTION + " TEXT,"
                 + COLUMN_PAYMENT_MODE + " TEXT,"
-                + COLUMN_TYPE + " TEXT DEFAULT 'Expense'" + ")")
+                + COLUMN_TYPE + " TEXT DEFAULT 'Expense',"
+                + COLUMN_TIME + " TEXT" + ")")
         db.execSQL(createTable)
     }
 
@@ -41,6 +43,9 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         }
         if (oldVersion < 3) {
             db.execSQL("ALTER TABLE $TABLE_EXPENSES ADD COLUMN $COLUMN_TYPE TEXT DEFAULT 'Expense'")
+        }
+        if (oldVersion < 4) {
+            db.execSQL("ALTER TABLE $TABLE_EXPENSES ADD COLUMN $COLUMN_TIME TEXT DEFAULT ''")
         }
     }
 
@@ -54,6 +59,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         values.put(COLUMN_DESCRIPTION, expense.description)
         values.put(COLUMN_PAYMENT_MODE, expense.paymentMode)
         values.put(COLUMN_TYPE, expense.type)
+        values.put(COLUMN_TIME, expense.time)
         val id = db.insert(TABLE_EXPENSES, null, values)
         db.close()
         return id
@@ -69,6 +75,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         values.put(COLUMN_DESCRIPTION, expense.description)
         values.put(COLUMN_PAYMENT_MODE, expense.paymentMode)
         values.put(COLUMN_TYPE, expense.type)
+        values.put(COLUMN_TIME, expense.time)
         
         val success = db.update(TABLE_EXPENSES, values, "$COLUMN_ID = ?", arrayOf(expense.id.toString()))
         db.close()
@@ -89,7 +96,8 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                     category = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CATEGORY)),
                     description = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DESCRIPTION)),
                     paymentMode = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_PAYMENT_MODE)),
-                    type = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TYPE)) ?: "Expense"
+                    type = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TYPE)) ?: "Expense",
+                    time = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TIME)) ?: ""
                 )
                 expenses.add(expense)
             } while (cursor.moveToNext())
@@ -118,7 +126,8 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                     category = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CATEGORY)),
                     description = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DESCRIPTION)),
                     paymentMode = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_PAYMENT_MODE)),
-                    type = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TYPE)) ?: "Expense"
+                    type = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TYPE)) ?: "Expense",
+                    time = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TIME)) ?: ""
                 )
                 expenses.add(expense)
             } while (cursor.moveToNext())

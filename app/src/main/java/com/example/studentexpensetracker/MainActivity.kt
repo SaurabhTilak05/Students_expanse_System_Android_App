@@ -13,7 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class MainActivity : AppCompatActivity() {
 
     private lateinit var dbHelper: DatabaseHelper
-    private lateinit var expenseAdapter: ExpenseAdapter
+    private lateinit var groupedAdapter: GroupedTransactionAdapter
     private lateinit var tvTotalExpense: TextView
     private lateinit var btnThemeToggle: ImageButton
     private var selectedYear = -1
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
         val rvExpenses = findViewById<RecyclerView>(R.id.rvExpenses)
         rvExpenses.layoutManager = LinearLayoutManager(this)
         
-        expenseAdapter = ExpenseAdapter(emptyList(), 
+        groupedAdapter = GroupedTransactionAdapter(emptyList(), 
             onEditClick = { expense ->
                 val intent = Intent(this, AddExpenseActivity::class.java)
                 intent.putExtra("EXPENSE_ID", expense.id)
@@ -104,6 +104,7 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("AMOUNT", expense.amount)
                 intent.putExtra("CATEGORY", expense.category)
                 intent.putExtra("DATE", expense.date)
+                intent.putExtra("TIME", expense.time)
                 intent.putExtra("DESCRIPTION", expense.description)
                 intent.putExtra("PAYMENT_MODE", expense.paymentMode)
                 intent.putExtra("TYPE", expense.type)
@@ -127,7 +128,7 @@ class MainActivity : AppCompatActivity() {
                     .show()
             }
         )
-        rvExpenses.adapter = expenseAdapter
+        rvExpenses.adapter = groupedAdapter
 
         // Footer - About App
         val tvFooterAppInfo = findViewById<TextView>(R.id.tvFooterAppInfo)
@@ -160,7 +161,10 @@ class MainActivity : AppCompatActivity() {
         } else {
             dbHelper.getAllExpenses()
         }
-        expenseAdapter.updateData(expenses)
+        
+        // Group transactions by date
+        val groupedTransactions = TransactionGroupHelper.groupTransactionsByDate(expenses)
+        groupedAdapter.updateData(groupedTransactions)
         
         val totalExpense = dbHelper.getTotalExpense(selectedYear, selectedMonth)
         val totalIncome = dbHelper.getTotalIncome(selectedYear, selectedMonth)

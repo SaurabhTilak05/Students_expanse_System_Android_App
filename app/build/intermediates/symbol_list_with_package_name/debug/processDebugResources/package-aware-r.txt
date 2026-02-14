@@ -3042,6 +3042,8 @@ drawable ic_close
 drawable ic_dark_mode
 drawable ic_delete
 drawable ic_edit
+drawable ic_expand_less
+drawable ic_expand_more
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -3320,6 +3322,7 @@ id enterAlwaysCollapsed
 id etAmount
 id etDate
 id etDescription
+id etTime
 id etTitle
 id exitUntilCollapsed
 id expand_activities_button
@@ -3371,6 +3374,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id ivExpandIcon
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3630,10 +3634,14 @@ id tvCategory
 id tvDate
 id tvExpenseSummary
 id tvFooterAppInfo
+id tvGroupDate
 id tvIncomeSummary
 id tvPaymentMode
+id tvTime
 id tvTitle
 id tvTotalExpense
+id tvTotalIncome
+id tvTransactionCount
 id unchecked
 id uniform
 id unlabeled
@@ -3792,6 +3800,7 @@ layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_expense
+layout item_transaction_group
 layout layout_about_bottom_sheet
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

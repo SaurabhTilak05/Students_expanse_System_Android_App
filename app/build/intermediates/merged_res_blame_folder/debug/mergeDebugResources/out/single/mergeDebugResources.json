@@ -1,11 +1,59 @@
 [
     {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_light_mode.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_light_mode.xml"
+    },
+    {
+        "merged": "com.example.studentexpensetracker.app-debug-31:/layout_item_transaction_group.xml.flat",
+        "source": "com.example.studentexpensetracker.app-main-33:/layout/item_transaction_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_rounded_top_corners_white.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\rounded_top_corners_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_button_background.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_circular_progress.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\circular_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_app_icon.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_app_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_expand_less.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_expand_less.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_spinner_background.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\spinner_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\layout_layout_about_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\layout\\layout_about_bottom_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\layout_activity_add_expense.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\layout\\activity_add_expense.xml"
+    },
+    {
         "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_delete.xml.flat",
         "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_delete.xml"
     },
     {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_light_mode.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_light_mode.xml"
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_expand_more.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_expand_more.xml"
     },
     {
         "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\layout_activity_main.xml.flat",
@@ -20,24 +68,8 @@
         "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_rounded_top_corners_white.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\rounded_top_corners_white.xml"
-    },
-    {
-        "merged": "com.example.studentexpensetracker.app-debug-31:/layout_activity_main.xml.flat",
-        "source": "com.example.studentexpensetracker.app-main-33:/layout/activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_button_background.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\button_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_circular_progress.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\circular_progress.xml"
+        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\layout_item_transaction_group.xml.flat",
+        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\layout\\item_transaction_group.xml"
     },
     {
         "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_edit.xml.flat",
@@ -48,16 +80,12 @@
         "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_add.xml"
     },
     {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_app_icon.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\ic_app_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\layout_item_expense.xml.flat",
         "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\layout\\item_expense.xml"
     },
     {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.studentexpensetracker.app-debug-31:/layout_item_expense.xml.flat",
+        "source": "com.example.studentexpensetracker.app-main-33:/layout/item_expense.xml"
     },
     {
         "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_ic_close.xml.flat",
@@ -66,18 +94,6 @@
     {
         "merged": "com.example.studentexpensetracker.app-debug-31:/layout_activity_add_expense.xml.flat",
         "source": "com.example.studentexpensetracker.app-main-33:/layout/activity_add_expense.xml"
-    },
-    {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_spinner_background.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\drawable\\spinner_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\layout_layout_about_bottom_sheet.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\layout\\layout_about_bottom_sheet.xml"
-    },
-    {
-        "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\layout_activity_add_expense.xml.flat",
-        "source": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-main-33:\\layout\\activity_add_expense.xml"
     },
     {
         "merged": "C:\\Users\\saura\\.gradle\\daemon\\8.13\\com.example.studentexpensetracker.app-debug-31:\\drawable_rounded_background_white.xml.flat",

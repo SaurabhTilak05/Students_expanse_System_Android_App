@@ -8,5 +8,6 @@ data class Expense(
     val category: String,
     val description: String = "",
     val paymentMode: String = "",
-    val type: String = "Expense" // "Income" or "Expense"
+    val type: String = "Expense", // "Income" or "Expense"
+    val time: String = "" // Added in DB version 4
 )
